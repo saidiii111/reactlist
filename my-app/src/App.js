@@ -12,12 +12,17 @@ class App extends React.Component {
       { id: 3, name: 'Majed', age: 28 }
     ]
   }
+
+  deletItem = (id) => {
+    console.log(id)
+  }
+
   render() { 
     return ( 
       <div className="App">
       <header className="App-header">
           testing
-             <TodoItems items={this.state.items} />
+             <TodoItems items={this.state.items} deletItem={this.deletItem} />
           <AddItems />
       </header>
     </div>
