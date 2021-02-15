@@ -1,15 +1,29 @@
 import React from 'react'
 import './TodoItems.css'
 
-const TodoItems = () => {
-    return  ( 
+const TodoItems = (props) => {
+    const { items } = props;
+    const ListItems = items.map(item => {
+        return (
+            <div key={item.id}>
+                <span>{item.neme}</span>
+                <span>{item.age}</span>
+                <span>&times;</span>
+            </div>
+        )
+    })
+    return (
      
-        <div>
-            <header>
-                   List Items
-            </header>
+        <div className="ListItems">
+            <div>
+                <span>Name</span>
+                <span>Age</span>
+                <span>Action</span>
+            </div>
+            {ListItems}
         </div>
-)
-}
+    );
+  }
+
 
 export default TodoItems;

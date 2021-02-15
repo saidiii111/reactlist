@@ -17,7 +17,7 @@ class App extends React.Component {
       <div className="App">
       <header className="App-header">
           testing
-             <TodoItems />
+             <TodoItems items={this.state.items} />
           <AddItems />
       </header>
     </div>
