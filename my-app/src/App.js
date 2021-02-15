@@ -1,7 +1,9 @@
+import React from 'react';
 import './App.css';
 import TodoItems from './components/TodoItems/TodoItems';
 
-class App extends Component {
+
+class App extends React.Component {
   state = {
     items: [
       { id: 1, name: 'Fayad', age: 31 },
@@ -13,7 +15,8 @@ class App extends Component {
     return ( 
       <div className="App">
       <header className="App-header">
-        testing
+          testing
+             <TodoItems />
       </header>
     </div>
   );
