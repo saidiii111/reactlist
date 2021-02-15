@@ -14,7 +14,10 @@ class App extends React.Component {
   }
 
   deletItem = (id) => {
-    console.log(id)
+    let items = this.state.items;
+    let i = items.findIndex(item => item.id === id)
+    items.splice(i,1)
+   this.setState({items})
   }
 
   render() { 
