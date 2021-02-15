@@ -14,9 +14,9 @@ class App extends React.Component {
   }
 
   deletItem = (id) => {
-    let items = this.state.items;
-    let i = items.findIndex(item => item.id === id)
-    items.splice(i,1)
+    let items = this.state.items.filter(item => {
+      return item.id !== id
+    })
    this.setState({items})
   }
 
