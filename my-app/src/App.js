@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TodoItems from './components/TodoItems/TodoItems';
+import AddItems from './components/AddItems/AddItems';
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
       <header className="App-header">
           testing
              <TodoItems />
+          <AddItems />
       </header>
     </div>
   );
