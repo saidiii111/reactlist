@@ -19,13 +19,20 @@ class App extends React.Component {
     this.setState({ items });
   };
 
+  addItem = (item) => {
+    item.id = Math.random();
+    let items = this.state.items;
+    items.push(item);
+    this.setState({ items });
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           testing
           <TodoItems items={this.state.items} deletItem={this.deletItem} />
-          <AddItems />
+          <AddItems addItem={this.addItem} />
         </header>
       </div>
     );

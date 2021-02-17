@@ -15,7 +15,7 @@ class AddItems extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.addItem(this.state);
   };
 
   render() {
