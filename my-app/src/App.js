@@ -28,9 +28,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <header className="App-header">
-          testing
+          <p className="text-center">Todo List</p>
+
           <TodoItems items={this.state.items} deletItem={this.deletItem} />
           <AddItems addItem={this.addItem} />
         </header>

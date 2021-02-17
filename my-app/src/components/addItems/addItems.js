@@ -15,11 +15,15 @@ class AddItems extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addItem(this.state);
-    this.setState({
-      name: "",
-      age: "",
-    });
+    if (e.target.name.value === "") {
+      return false;
+    } else {
+      this.props.addItem(this.state);
+      this.setState({
+        name: "",
+        age: "",
+      });
+    }
   };
 
   render() {
@@ -40,7 +44,7 @@ class AddItems extends React.Component {
             onChange={this.handleChange}
             value={this.state.age}
           />
-          <input type="submit" value="Adding" />
+          <input type="submit" value="Add" />
         </form>
       </div>
     );
